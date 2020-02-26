@@ -5,7 +5,7 @@ const RestaurantsScreenStacks = createStackNavigator({
   Restaurants: {
     screen: RestaurantsScreen,
     options: () => ({
-      title: "Restaurants"
+      title: "Restaurantes"
     })
   }
 });

@@ -2,6 +2,7 @@ import React from "react";
 import { createAppContainer } from "react-navigation";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import RestaurantsStack from "./RestaurantsStacks";
+import TopRestaurantsStack from "./TopRestaurantsStacks";
 import { Icon } from "react-native-elements";
 
 const NavigationStacks = createBottomTabNavigator({
@@ -9,6 +10,20 @@ const NavigationStacks = createBottomTabNavigator({
     screen: RestaurantsStack,
     navigationOptions: () => ({
       tabBarLabel: "Restaurantes",
+      tabBarIcon: ({ tintColor }) => {
+        <Icon
+          type="material-comunity"
+          name="compass-outline"
+          size={22}
+          color={tintColor}
+        />;
+      }
+    })
+  },
+  TopRestaurants: {
+    screen: TopRestaurantsStack,
+    navigationOptions: () => ({
+      tabBarLabel: "Top restaurantes",
       tabBarIcon: ({ tintColor }) => {
         <Icon
           type="material-comunity"
